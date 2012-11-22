@@ -1,0 +1,20 @@
+    global
+        daemon
+        maxconn 256
+
+    defaults
+        mode http
+        timeout connect 5000ms
+        timeout client 50000ms
+        timeout server 50000ms
+
+    frontend http-in
+        bind *:80
+        default_backend servers
+
+    backend servers
+    server    test2.local 192.168.1.161:80 maxconn 10
+    server    test3.local 192.168.1.162:80 maxconn 10
+
+        stats uri /stats
+        stats auth haproxy:123456
