@@ -1,0 +1,4 @@
+#test2.local IPaddr::192.168.1.180/32/eth0:1
+#test2.local drbddisk::repdata Filesystem::/dev/drbd0::/repdata::ext4::rw httpd
+#test2.local IPaddr::192.168.1.210/24 drbddisk::repdata  Filesystem::/dev/drbd0::/repdata::ext4 httpd mysqld
+test2.local IPaddr::85.13.220.237/29/eth0:1 drbddisk::repdata  Filesystem::/dev/drbd0::/repdata::ext4 httpd mysqld

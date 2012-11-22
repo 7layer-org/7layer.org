@@ -1,0 +1,18 @@
+autojoin none
+ucast eth0 192.168.1.200
+ucast eth0 192.168.1.201
+#bcast eth0
+keepalive 1
+deadtime 20
+#deadping 750ms
+warntime 10
+udpport 694		#port to communicate the nodes to each other
+auto_failback on
+node test2.local	#node1
+node test3.local	#node2
+use_logd yes
+nice_failback on
+#logfacility local0
+ping 192.168.1.150
+respawn hacluster /usr/lib64/heartbeat/ipfail
+#crm yes
